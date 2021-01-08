@@ -18,4 +18,13 @@ class Grid
       @active += 1
     end
   end
+
+  def vertical_search(grid, row_index, column_index)
+    if grid[row_index + 1][column_index] == "active"
+      @active += 1
+    end
+    if grid[row_index - 1][column_index] == "active"
+      @active += 1
+    end
+  end
 end
