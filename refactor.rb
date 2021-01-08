@@ -44,10 +44,19 @@ class Grid
     end
   end
 
+  def switch_status(grid, row_index, column_index)
+    if grid[row_index][column_index] == 'inactive' && @active >= 3
+    grid[row_index][column_index] = 'active'
+    else 
+      grid[row_index][column_index] = 'inactive'
+    end
+  end
+
   def cell_neighborgs(grid, row_index, column_index)
     horizontal_search(grid, row_index, column_index)
     vertical_search(grid, row_index, column_index)
     diagonal_search(grid, row_index, column_index)
     @active
   end
+
 end
