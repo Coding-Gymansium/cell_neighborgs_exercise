@@ -52,4 +52,14 @@ class GridTest < Minitest::Test
     grid_1.diagonal_search(grid_1.grid,1, 1)
     assert_equal 3, grid_1.active
   end
+
+  def test_it_can_count_all_active_neighboring_cells
+    grid_1 = Grid.new(
+      row_1 = ["active", "active", "active"],
+      row_2 = ["inactive", "active", "inactive"],
+      row_3 = ["active", "inactive", "active"]
+    )
+    grid_1.cell_neighborgs(grid_1.grid,1, 1)
+    assert_equal 5, grid_1.active
+  end
 end
