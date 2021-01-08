@@ -71,7 +71,19 @@ class GridTest < Minitest::Test
     )
     assert_equal "active", grid_1.grid[1][1]
     grid_1.cell_neighborgs(grid_1.grid,1, 1)
+    assert_equal "inactive", grid_1.grid[1][1]
     grid_1.switch_status(grid_1.grid,1, 1)
+    assert_equal "active", grid_1.grid[1][1]
+  end
+
+  def test_cell_neighborgs_method_can_switch_status
+    grid_1 = Grid.new(
+      row_1 = ["active", "active", "inactive"],
+      row_2 = ["inactive", "active", "inactive"],
+      row_3 = ["active", "inactive", "inactive"]
+    )
+    assert_equal "active", grid_1.grid[1][1]
+    grid_1.cell_neighborgs(grid_1.grid,1, 1)
     assert_equal "inactive", grid_1.grid[1][1]
   end
 end
