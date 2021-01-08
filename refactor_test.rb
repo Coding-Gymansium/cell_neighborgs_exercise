@@ -32,4 +32,14 @@ class GridTest < Minitest::Test
     grid_1.horizontal_search(grid_1.grid,0, 1)
     assert_equal 2, grid_1.active
   end
+
+  def test_it_can_count_active_cells_neighboring_cells_vertically
+    grid_1 = Grid.new(
+      row_1 = ["active", "active", "active"],
+      row_2 = ["inactive", "active", "inactive"],
+      row_3 = ["inactive", "inactive", "inactive"]
+    )
+    grid_1.vertical_search(grid_1.grid,0, 1)
+    assert_equal 1, grid_1.active
+  end
 end
