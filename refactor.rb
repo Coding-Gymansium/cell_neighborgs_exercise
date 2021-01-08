@@ -27,4 +27,20 @@ class Grid
       @active += 1
     end
   end
+
+  def diagonal_search(grid, row_index, column_index)
+    if grid[row_index - 1][column_index - 1] == "active"
+      @active += 1
+    end
+    if grid[row_index - 1][column_index + 1] == "active"
+      @active += 1
+    end
+  
+    if grid[row_index + 1][column_index - 1] == "active"
+      @active += 1
+    end
+    if grid[row_index + 1][column_index + 1] == "active"
+      @active += 1
+    end
+  end
 end
