@@ -23,3 +23,9 @@ Eachiteration is a pure function of the preceding one. The rules continue to be 
 | :------------- | :----------: | -----------: |
 |  4 | **cell**   | 5    |
 | 6   | 7 | 8 |
+
+## Example Iterations
+<br/>
+<p align="center">
+<img src="assets/images/example-iterations.png" width="500"><br/>
+</p>
