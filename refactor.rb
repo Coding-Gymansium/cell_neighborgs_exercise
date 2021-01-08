@@ -57,6 +57,7 @@ class Grid
     vertical_search(grid, row_index, column_index)
     diagonal_search(grid, row_index, column_index)
     @active
+    switch_status(grid, row_index, column_index)
   end
 
 end
